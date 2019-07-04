@@ -1,6 +1,8 @@
-import  {letgo} from './src/go';
-import { firstsite } from './src/firstSite';
+import { jj ,SecondSiteCrawler} from './src/SecondSite';
+process.setMaxListeners(0);
+
 (async()=>{
    // await letgo;
-    await firstsite;
+  //  await firstsite;
+  await SecondSiteCrawler();
 })()

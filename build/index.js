@@ -36,12 +36,15 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 exports.__esModule = true;
-var go_1 = require("./src/go");
+var firstSite_1 = require("./src/firstSite");
 (function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
-            case 0: return [4 /*yield*/, go_1.letgo];
+            case 0: 
+            // await letgo;
+            return [4 /*yield*/, firstSite_1.firstsite];
             case 1:
+                // await letgo;
                 _a.sent();
                 return [2 /*return*/];
         }
