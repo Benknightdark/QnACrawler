@@ -1,0 +1,28 @@
+{
+  "name": "qnacrawler",
+  "version": "1.0.0",
+  "description": "\"# QnACrawler\"",
+  "main": "index.js",
+  "dependencies": {
+    "puppeteer": "^1.18.1"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^1.12.4",
+    "ts-node": "^8.2.0",
+    "typescript": "^3.5.1"
+  },
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc  index.ts --rootDir . --outDir build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Benknightdark/QnACrawler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benknightdark/QnACrawler/issues"
+  },
+  "homepage": "https://github.com/Benknightdark/QnACrawler#readme"
+}
