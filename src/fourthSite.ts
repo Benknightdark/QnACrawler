@@ -12,9 +12,10 @@ export const fourthSiteCrawler = async () => {
     let clientConfig: ClientConfig=new ClientConfig();
     clientConfig.ignoreStatic = true;
     clientConfig.url = `https://health.udn.com/health/story/5968/343996`;
-
+    let webSitName='元氣網'
     const {browser,page,  $} = await crawlClient(clientConfig);
     const questionlist=$('#story_body_content > p > font');
+    let data=[];
     for (let index = 0; index < questionlist.length; index++) {
         const element = questionlist[index];
         console.log($(element).text())
@@ -29,10 +30,16 @@ export const fourthSiteCrawler = async () => {
         }
         console.log(answerString)
         console.log('--------------------------------')
+        data.push({
+            question:$(element).text(),
+            answer:answerString
+        })
        // console.log(elP)
 
         
     }
+    let ndata= await tsv.stringify(data)
+        await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, ndata);
 //console.log(questionlist)
 
 }
