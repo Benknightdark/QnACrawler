@@ -86,3 +86,7 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+build/
+
+build/src/firstSite.json
+build/src/firstSite.json

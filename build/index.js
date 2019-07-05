@@ -36,15 +36,20 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 var _this = this;
 exports.__esModule = true;
-var firstSite_1 = require("./src/firstSite");
+var thirdSite_1 = require("./src/thirdSite");
+process.setMaxListeners(0);
 (function () { return __awaiter(_this, void 0, void 0, function () {
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0: 
             // await letgo;
-            return [4 /*yield*/, firstSite_1.firstsite];
+            //  await firstsite;
+            // await SecondSiteCrawler();
+            return [4 /*yield*/, thirdSite_1.ThirdSiteCrawler()];
             case 1:
                 // await letgo;
+                //  await firstsite;
+                // await SecondSiteCrawler();
                 _a.sent();
                 return [2 /*return*/];
         }

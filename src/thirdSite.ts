@@ -3,7 +3,6 @@ import * as puppeteer from 'puppeteer';
 import * as cheerio from "cheerio";
 import * as tsv from 'tsv'
 import * as fs from 'fs'
-import { saveToTSV } from './Helpers/tsvHelper';
 const $ = cheerio;
 const webSitName = `馬偕醫院`;
 export const ThirdSiteCrawler = async () => {

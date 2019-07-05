@@ -18,7 +18,7 @@
   "scripts": {
     "start": "ts-node index.ts",
     "watch": "nodemon --exec ts-node -- ./index.ts",
-    "build": "tsc  index.ts --rootDir . --outDir build"
+    "build": "tsc  index.ts --rootDir . --outDir build --resolveJsonModule"
   },
   "repository": {
     "type": "git",
