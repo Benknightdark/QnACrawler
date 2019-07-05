@@ -1,7 +1,8 @@
 import * as mergeFiles from 'merge-files';
-import * as fs from 'fs'
+// import * as fs from 'fs'
 import * as tsv from 'tsv'
 import { rejects } from 'assert';
+import * as fs from 'fs-extra'
 //var tsv is the TSV file with headers
 
 const mergFile = async (files, testFolder) => {
@@ -17,8 +18,18 @@ const mergFile = async (files, testFolder) => {
   return nData;
 
 }
+const  replaceContents=async(file, replacement, cb) =>{
+
+  fs.readFile(replacement, (err, contents) => {
+    if (err) return cb(err);
+    fs.writeFile(file, contents, cb);
+  });
+
+}
 export const doMerFile = async () => {
   let testFolder = './src//Data';
+  await   fs.removeSync(`${testFolder}/result.tsv`)
+
   // const outPutPath = __dirname + '/result.tsv';;
   // let inputPathList = [];
   fs.readdir(testFolder, async (err, files) => {
@@ -28,10 +39,12 @@ export const doMerFile = async () => {
       let c = b.replace(`question\tanswer`, '')
       return c
     }).join("")
-    if (await fs.existsSync(`./src//Data/result.tsv`)) {
-      await fs.unlinkSync(`./src//Data/result.tsv`)
-    }
-    await fs.writeFileSync(`${testFolder}/result.tsv`, new Buffer(`question\tanswer` + nbb.replace(`,undefined`, '')), { encoding: 'utf8' });
+    
+     await   fs.createFileSync(`${testFolder}/result.tsv`)
+      await fs.writeFileSync(`${testFolder}/result.tsv`, new Buffer(`question\tanswer` + nbb.replace(`,undefined`, '')), { encoding: 'utf8' });
+      //
+    
+
     //  await fs.writeFileSync(`../Data/result.tsv`, ndata);
 
     //   console.log(inputPathList)
