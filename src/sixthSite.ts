@@ -150,9 +150,9 @@ let ndata=[];
 
    
      const flattened = [].concat(...nData);
-console.log(flattened)
-//    console.log(flattened)
-    let tsvdata= await tsv.stringify(flattened)
+// console.log(flattened)
+let bb=JSON.stringify(flattened).replace(/\\t/g,'').replace(/\\n/g,'').trim()
+    let tsvdata= await tsv.stringify(JSON.parse(bb))
    await fs.writeFileSync(`./src/Data/${"哏"}.tsv`,tsvdata)
  //  await console .log ('done')
 }
