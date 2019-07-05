@@ -1,23 +1,25 @@
 import * as mergeFiles from 'merge-files';
 import * as fs from 'fs'
-const merge =async()=>{
-    const testFolder = '../Data';
-
+(async()=>{
+    let testFolder = '../Data';
+    const outPutPath =__dirname + '/result.tsv';;
     let inputPathList =[];
-    fs.readdir(testFolder, (err, files) => {
+    fs.readdir(testFolder, async (err, files) => {
+        
       files.forEach(file => {
         console.log(file);
         inputPathList.push(testFolder+"/"+file)
       });
+      console.log(inputPathList)
+      const status = await mergeFiles(inputPathList, outPutPath);
+      // or
+      mergeFiles(inputPathList, outPutPath).then((status) => {
+          // next
+          console.log(status)
+      });
     });
-    
-    const status = await mergeFiles(inputPathList, testFolder);
-    // or
-    mergeFiles(inputPathList, testFolder).then((status) => {
-        // next
-        console.log(status)
-    });
-}
+
+})()
 
 // const inputPathList = [
 //     __dirname + '/1.txt',
