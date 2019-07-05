@@ -30,13 +30,14 @@ export const ThirdSiteCrawler = async () => {
             // console.log(answer)
             // console.log("------------------------------")
             data.push({
-                question:$(element).text().trim(),
-                answer:answer
+                question:$(element).text().trim().replace(/\\t/g,'').replace(/\\n/g,'').trim(),
+                answer:answer.replace(/\\t/g,'').replace(/\\n/g,'').trim()
             })
             
         }
-        const dataP=await Promise.all(data);
-        let ndata= await tsv.stringify(dataP)
+        let  dataP=await Promise.all(data);
+       
+        let ndata= await tsv.stringify(JSON.parse( JSON.stringify(dataP).replace(/\\t/g,'').replace(/\\n/g,'').trim()))
         await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, ndata);
         // console.log(dataP);
        // await saveToTSV(dataP,`${webSitName}.tsv`)
