@@ -1,5 +1,6 @@
 import * as puppeteer from 'puppeteer';
-export const client=async (config:ClientConfig)=>{
+import * as cheerio from 'cheerio';
+export const crawlClient=async (config:ClientConfig)=>{
     const browser = await puppeteer.launch({ headless: true });
     const page = await browser.newPage();
     await page.setRequestInterception(true);
@@ -16,14 +17,14 @@ export const client=async (config:ClientConfig)=>{
     
     await page.goto(`${config.url}`, { waitUntil: 'domcontentloaded' });
     const html = await page.content()
-    const $2 = cheerio.load(html);
+    const $ = cheerio.load(html);
     return {
         browser:browser,
         page:page,
-        $2:$2
+        $:$
     }
 }
-class ClientConfig {
+export class ClientConfig {
     ignoreStatic:Boolean;
     url:String;
 }
