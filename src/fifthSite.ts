@@ -3,14 +3,14 @@ import * as fs from 'fs'
 import { ClientConfig, crawlClient } from './Helpers/crawlHelper';
 const getAnswer = (element2, $) => {
     if (element2[0].name == 'p') {
-        return element2.text()
+        return element2.text()+"\n"
     }
     if (element2[0].name == 'ol') {
         const l = element2.find('li')
         let s = ''
         for (let index = 0; index < l.length; index++) {
             const element = $(l[index]);
-            s += "\n" + element.text() + "\n";
+            s +=  element.text() + "\n";
         }
         return s;
     }
