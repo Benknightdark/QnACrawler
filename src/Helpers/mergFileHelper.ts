@@ -24,12 +24,12 @@ import { rejects } from 'assert';
     fs.readdir(testFolder, async (err, files) => {
         const bb=await mergFile(files,testFolder)
      let nbb=   bb.map((b:any)=>{
-         let c=b.replace(`question\tanswer\r\n`)
+         let c=b.replace(`question\tanswer\r\n`,'')
          return c
-      }).join(",")
+      }).join("")
 
       //  await fs.writeFileSync(`../Data/result.tsv`, ndata);
-       await fs.writeFileSync(`../Data/result.tsv`, new Buffer(nbb),{encoding:'utf8'});
+       await fs.writeFileSync(`../Data/result.tsv`, new Buffer(nbb.replace(`,undefined`,'')),{encoding:'utf8'});
 
     //   console.log(inputPathList)
     //   const status = await mergeFiles(inputPathList, outPutPath);
