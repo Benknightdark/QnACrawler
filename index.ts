@@ -3,6 +3,7 @@ import { ThirdSiteCrawler } from './src/thirdSite';
 import {  fourthSiteCrawler } from './src/fourthSite';
 import { doMerFile } from './src/Helpers/mergFileHelper';
 import { fifthSiteCrawler } from './src/fifthSite';
+import { getCatList, crawlSixthSite } from './src/sixthSite';
 process.setMaxListeners(0);
 
 (async()=>{
@@ -10,8 +11,9 @@ process.setMaxListeners(0);
   //  await firstsite;
  // await SecondSiteCrawler();
  //---------------------------------------------
-  await ThirdSiteCrawler();
-  await fourthSiteCrawler();
-await fifthSiteCrawler();
- await doMerFile();
+ await crawlSixthSite();
+   await ThirdSiteCrawler();
+   await fourthSiteCrawler();
+ await fifthSiteCrawler();
+  await doMerFile();
 })()
