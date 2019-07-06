@@ -17,10 +17,10 @@ process.setMaxListeners(0);
 
  //------------------上面都是在作業配的資料---------------------
 await crawlNinthSite();
- //  await crawlEighthSite();
-//   await crawlSixthSite();
-//     await fourthSiteCrawler();
-//   await fifthSiteCrawler();
-// await crawlSeventhSite();
-//    await doMerFile();
+  await crawlEighthSite();
+  await crawlSixthSite();
+    await fourthSiteCrawler();
+  await fifthSiteCrawler();
+await crawlSeventhSite();
+   await doMerFile();
 })()
