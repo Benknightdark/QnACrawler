@@ -54,7 +54,7 @@ export const crawlNinthSite = async () => {
                 let answer = await getAnser(url);
                 await data.push({
                     question: question,
-                    answer: answer
+                    answer: answer.replace('欣華牙醫診所 鄧允文 醫師','')
                 })
             }
 

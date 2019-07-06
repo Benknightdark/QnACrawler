@@ -32,7 +32,7 @@ export const fourthSiteCrawler = async () => {
         console.log('--------------------------------')
         data.push({
             question:$(element).text().replace('Q：',''),
-            answer:answerString.replace('A：','')
+            answer:answerString.replace('A：','').replace('【2009/10/04 元氣周報】','')
         })
        // console.log(elP)
 
