@@ -107,8 +107,8 @@ let ndata=[];
         if(answer!==''){
 
             data.push({
-                question:question.replace(/&amp;nbsp;\s/g,"").replace('\n','').replace('\n\t','').replace('\t','').replace(' \n','').trim(),
-                answer:answer.replace(/&amp;nbsp;\s/g,"").replace('\n','').replace('\n\t','').replace('\t','').replace(' \n','').trim()
+                question:question.replace(/&amp;nbsp;\s/g,"").replace('\n','').replace('\n\t','').replace('\t','').replace(' \n','').trim().replace('Q：',''),
+                answer:answer.replace(/&amp;nbsp;\s/g,"").replace('\n','').replace('\n\t','').replace('\t','').replace(' \n','').trim().replace('A：','')
             })
         }
 
