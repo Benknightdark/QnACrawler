@@ -31,8 +31,8 @@ export const fourthSiteCrawler = async () => {
         console.log(answerString)
         console.log('--------------------------------')
         data.push({
-            question:$(element).text(),
-            answer:answerString
+            question:$(element).text().replace('Q：',''),
+            answer:answerString.replace('A：','')
         })
        // console.log(elP)
 
