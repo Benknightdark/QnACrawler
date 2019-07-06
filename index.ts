@@ -12,10 +12,10 @@ process.setMaxListeners(0);
   //  await firstsite;
  // await SecondSiteCrawler();
  //---------------------------------------------
-//  await crawlSixthSite();
-//    await ThirdSiteCrawler();
-//    await fourthSiteCrawler();
-//  await fifthSiteCrawler();
+  await crawlSixthSite();
+    await ThirdSiteCrawler();
+    await fourthSiteCrawler();
+  await fifthSiteCrawler();
 await crawlSeventhSite();
-//   await doMerFile();
+   await doMerFile();
 })()
