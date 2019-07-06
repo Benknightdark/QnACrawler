@@ -6,6 +6,7 @@ import { fifthSiteCrawler } from './src/fifthSite';
 import { getCatList, crawlSixthSite } from './src/sixthSite';
 import { crawlSeventhSite } from './src/seventhSite';
 import { crawlEighthSite } from './src/eighthSIte';
+import { crawlNinthSite } from './src/nithSIte';
 process.setMaxListeners(0);
 
 (async()=>{
@@ -15,11 +16,11 @@ process.setMaxListeners(0);
   //   await ThirdSiteCrawler();
 
  //------------------上面都是在作業配的資料---------------------
- await crawlEighthSite();
-
-  await crawlSixthSite();
-    await fourthSiteCrawler();
-  await fifthSiteCrawler();
-await crawlSeventhSite();
-   await doMerFile();
+await crawlNinthSite();
+ //  await crawlEighthSite();
+//   await crawlSixthSite();
+//     await fourthSiteCrawler();
+//   await fifthSiteCrawler();
+// await crawlSeventhSite();
+//    await doMerFile();
 })()
