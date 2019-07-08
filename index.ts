@@ -7,6 +7,8 @@ import { getCatList, crawlSixthSite } from './src/sixthSite';
 import { crawlSeventhSite } from './src/seventhSite';
 import { crawlEighthSite } from './src/eighthSIte';
 import { crawlNinthSite } from './src/nithSIte';
+import { crawlTenthSite } from './src/tenthSite';
+import { crawlEleventhSite } from './src/eleventhSite';
 process.setMaxListeners(0);
 
 (async () => {
@@ -14,8 +16,11 @@ process.setMaxListeners(0);
   //  await firstsite;
   // await SecondSiteCrawler();
   //   await ThirdSiteCrawler();
+  // await crawlTenthSite(); //網頁結構問題太多
+
 
   //------------------上面都是在作業配的資料---------------------
+  //await crawlEleventhSite()
   // await console.log('9 start')
   // await crawlNinthSite();
   // await console.log('9 done')

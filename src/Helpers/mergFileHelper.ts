@@ -60,7 +60,7 @@ export const doMerFile = async () => {
 
 export const mergeJsonFile = async () => {
   let testFolder = './src//Data';
-  await fs.removeSync(`${testFolder}/result.json`)
+  await fs.removeSync(`${testFolder}/data.xlsx`)
   fs.readdir(testFolder, async (err, files) => {
 let ndata=[]
     console.log(files)
