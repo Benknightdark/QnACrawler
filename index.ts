@@ -34,7 +34,7 @@ process.setMaxListeners(0);
   // await fifthSiteCrawler();
   // await crawlSeventhSite();
   //   await doMerFile();
-  //await mergeJsonFile();
+  await mergeJsonFile();
   await console.log('All done')
 
 })()

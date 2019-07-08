@@ -18,6 +18,7 @@ export const crawlTwelvithSite = async () => {
     }
      
  }
+  let data=[] 
  questionList.map((a:Cheerio)=>{
     let question=a.text();
     let children=a.nextUntil('hr')
@@ -25,8 +26,10 @@ export const crawlTwelvithSite = async () => {
     console.log(question)
     console.log(children.text())
     console.log('=====================================================')
+    data.push({question:question.replace('問：',''),answer:children.text().replace('答：','')})
+
  })
- //    await fs.writeFileSync(`./src/Data/${webSitName}.json`, JSON.stringify(data))
+     await fs.writeFileSync(`./src/Data/${webSitName}.json`, JSON.stringify(data))
 
     await  browser.close();
 
