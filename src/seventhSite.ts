@@ -56,10 +56,10 @@ export const crawlSeventhSite = async () => {
             answer: answer
         })
     }
-     let tsvdata = await tsv.stringify(JSON.parse(JSON.stringify(data).replace(/\\n/g, ' ').replace(/\\t/g, ' ').trim()))
- //  await fs.writeFileSync(`./src/Data/${webSitName}.json`, )
+ //    let tsvdata = await tsv.stringify(JSON.parse(JSON.stringify(data).replace(/\\n/g, ' ').replace(/\\t/g, ' ').trim()))
+ await fs.writeFileSync(`./src/Data/${webSitName}.json`, JSON.stringify(data))
 
-     await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, tsvdata)
+ //    await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, tsvdata)
 
      browser.close();
 

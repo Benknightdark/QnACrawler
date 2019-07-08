@@ -151,8 +151,11 @@ let ndata=[];
    
      const flattened = [].concat(...nData);
 // console.log(flattened)
-let bb=JSON.stringify(flattened).replace(/\\t/g,'').replace(/\\n/g,'').trim()
-    let tsvdata= await tsv.stringify(JSON.parse(bb))
-   await fs.writeFileSync(`./src/Data/${"哏"}.tsv`,tsvdata)
+// let bb=JSON.stringify(flattened).replace(/\\t/g,'').replace(/\\n/g,'').trim()
+//     let tsvdata= await tsv.stringify(JSON.parse(bb))
+ //await fs.writeFileSync(`./src/Data/${"哏"}.tsv`,tsvdata)
+   await fs.writeFileSync(`./src/Data/${"哏"}.json`, JSON.stringify(flattened))
+
+
  //  await console .log ('done')
 }

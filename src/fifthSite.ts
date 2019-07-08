@@ -72,7 +72,9 @@ export const fifthSiteCrawler = async () => {
         data.push({question:element.text(),answer:answer})
 
     }
-     let ndata= await tsv.stringify(data)
-    await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, ndata);
+    // let ndata= await tsv.stringify(data)
+ //   await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, ndata);
+ await fs.writeFileSync(`./src/Data/${webSitName}.json`, JSON.stringify(data))
+
 
 }

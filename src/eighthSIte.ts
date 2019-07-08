@@ -29,7 +29,8 @@ questions.map( (a)=>{
    //  let tsvdata = await tsv.stringify(JSON.parse(JSON.stringify(data).replace(/\\n/g, ' ').replace(/\\t/g, ' ').trim()))
  //  await fs.writeFileSync(`./src/Data/${webSitName}.json`, )
 
-     await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, tsvdata)
+//     await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, tsvdata)
+     await fs.writeFileSync(`./src/Data/${webSitName}.json`, JSON.stringify(data))
 
      browser.close();
 

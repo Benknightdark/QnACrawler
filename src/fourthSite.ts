@@ -38,8 +38,10 @@ export const fourthSiteCrawler = async () => {
 
         
     }
-    let ndata= await tsv.stringify(data)
-        await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, ndata);
+    // let ndata= await tsv.stringify(data)
+    //     await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, ndata);
+    await fs.writeFileSync(`./src/Data/${webSitName}.json`, JSON.stringify(data))
+
 //console.log(questionlist)
 
 }

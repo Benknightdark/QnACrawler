@@ -78,10 +78,11 @@ export const crawlNinthSite = async () => {
     //         }
     //     })
   
-      let tsvdata = await tsv.stringify(data)
+    //   let tsvdata = await tsv.stringify(data)
 
 
-      await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, tsvdata)
+    //   await fs.writeFileSync(`./src/Data/${webSitName}.tsv`, tsvdata)
+    await fs.writeFileSync(`./src/Data/${webSitName}.json`, JSON.stringify(data))
 
     browser.close();
 
