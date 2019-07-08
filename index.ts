@@ -9,6 +9,7 @@ import { crawlEighthSite } from './src/eighthSIte';
 import { crawlNinthSite } from './src/nithSIte';
 import { crawlTenthSite } from './src/tenthSite';
 import { crawlEleventhSite } from './src/eleventhSite';
+import { crawlTwelvithSite } from './src/twelvithSite';
 process.setMaxListeners(0);
 
 (async () => {
@@ -20,7 +21,8 @@ process.setMaxListeners(0);
 
 
   //------------------上面都是在作業配的資料---------------------
-  await crawlEleventhSite()
+  await crawlTwelvithSite()
+ // await crawlEleventhSite()
   // await console.log('9 start')
   // await crawlNinthSite();
   // await console.log('9 done')
@@ -32,7 +34,7 @@ process.setMaxListeners(0);
   // await fifthSiteCrawler();
   // await crawlSeventhSite();
   //   await doMerFile();
-  await mergeJsonFile();
+  //await mergeJsonFile();
   await console.log('All done')
 
 })()
