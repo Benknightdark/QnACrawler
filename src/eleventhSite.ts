@@ -44,8 +44,8 @@ export const crawlEleventhSite = async () => {
         }
         console.log(`================================`);
         data.push({
-            question:element.text(),
-            answer:answer
+            question:element.text().replace("Q：",''),
+            answer:answer.replace("A：",'')
         })
         
     }

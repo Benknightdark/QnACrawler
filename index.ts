@@ -20,7 +20,7 @@ process.setMaxListeners(0);
 
 
   //------------------上面都是在作業配的資料---------------------
-  //await crawlEleventhSite()
+  await crawlEleventhSite()
   // await console.log('9 start')
   // await crawlNinthSite();
   // await console.log('9 done')
